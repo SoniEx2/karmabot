@@ -152,6 +152,9 @@ function connectionMetatable:step()
   local mainThreadPool = self.mainThreadPool
   local eventQueue = self.eventQueue
   local event = table.remove(eventQueue) -- pop
+  if not event then
+    return false, "No events available"
+  end
   local threads = mainThreadPool.threads
   local events = mainThreadPool.events
   local i = 1
