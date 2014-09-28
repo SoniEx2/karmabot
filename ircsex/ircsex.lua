@@ -190,6 +190,17 @@ function connectionMetatable:pushEvent(name, ...)
   table.insert(self.eventQueue, evt)
 end
 
+-- handlers
+
+local handlers = {}
+
+function handlers.socketHandler(connection, event, ...)
+  while true do
+    local s = connection.socket
+    -- TODO
+  end
+end
+
 local setmetatable = function(t, mt)
   if mt == connectionMetatable then
     -- init basic stuff
