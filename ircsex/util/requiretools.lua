@@ -7,6 +7,8 @@ local function req(name)
   -- that is, if in module "something", require"something.test" can be rewritten as req"test"
 end
 
+M.req = req
+
 local function opt(name)
   local s,m = pcall(require,name)
   if s then
@@ -15,5 +17,7 @@ local function opt(name)
     return nil
   end
 end
+
+M.opt = opt
 
 return M

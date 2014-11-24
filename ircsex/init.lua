@@ -30,7 +30,7 @@ local lpeg = require'lpeg'
 
 local corouthreads = require'ircsex.util.corouthreads'
 
-local tcphandlers = require'ircsex.util.tcphandler'
+local tcphandlers = require'ircsex.tcphandler'
 
 local M = {}
 
@@ -55,7 +55,7 @@ function M.open(to)
   end
   if type(t) == "table" then
     local pool = corouthreads.newPool()
-    -- TODO open connection
+    
     return pool
   else
     error("Expected string or table for argument #1")
