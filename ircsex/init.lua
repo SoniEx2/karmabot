@@ -28,7 +28,7 @@ local socket = require'socket'
 local ssl = req.opt'ssl'
 local lpeg = require'lpeg'
 
-local corouthreads = require'ircsex.util.corouthreads'
+local corouthreads = require'ircsex.corouthreads'
 
 local tcphandlers = require'ircsex.tcphandler'
 
