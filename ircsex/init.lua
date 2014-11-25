@@ -20,7 +20,6 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
   ]]
--- start of IRC library
 
 local req = require'ircsex.util.requiretools'
 

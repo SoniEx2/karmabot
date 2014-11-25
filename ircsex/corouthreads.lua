@@ -10,7 +10,7 @@ local tinsert = table.insert
 
 local sfmt = string.format
 
-local trace = debug.traceback
+local trace = debug.traceback or function() return "No stack traceback available" end
 
 -- unpack event `evt` as in `evt.name, evt[1], evt[2], ..., evt[evt.n]`
 local function evtunpack(evt)
